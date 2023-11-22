@@ -1,1 +1,49 @@
 @import '~normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-color-primary: #333;
+  --font-color-white: #fff;
+  --font-color-dark-blue: #13829b;
+  --bg-color-light-orange: #fcc29a;
+  --bg-color-very-light-orange: #fde9c9;
+  --bg-color-cyan: #29d2e4;
+  --bg-color-dark-cyan: #13829b;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--font-color-primary, #333);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

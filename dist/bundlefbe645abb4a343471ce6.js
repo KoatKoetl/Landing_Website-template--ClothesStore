@@ -398,9 +398,123 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `
-`, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --font-color-primary: #333;
+  --font-color-white: #fff;
+  --font-color-black: #000;
+  --font-color-dark-blue: #13829b;
+  --bg-color-light-orange: #fcc29a;
+  --bg-color-very-light-orange: #fde9c9;
+  --bg-color-cyan: #29d2e4;
+  --bg-color-dark-cyan: #13829b;
+  --font-family-primary: Lato;
+  --font-family-secondary: Raleway;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--font-color-primary, #333);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling website primary header */
+.header__content {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  border-bottom: 3px solid #000;
+}
+
+.header__nav-links-list {
+  display: flex;
+  gap: 4rem;
+  padding-top: 1rem;
+}
+
+.header__nav-link {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--font-color-black, #000);
+  text-decoration: underline;
+  text-decoration-color: #00000000;
+  line-height: normal;
+  padding: 0.425rem;
+  border-radius: 0.5rem;
+  transition: text-decoration-color 250ms;
+  text-decoration-thickness: 0.625rem;
+  text-underline-offset: 1.9rem;
+}
+
+.header__nav-link:hover {
+  text-decoration-color: #000000ff;
+}
+
+.header__nav-link:active {
+  text-underline-offset: 0.5rem;
+  transition: text-underline-offset 100ms ease;
+}
+
+.header__nav--secondary {
+  align-self: flex-end;
+}
+
+.header__nav-button {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--font-color-white, #fff);
+  line-height: normal;
+  padding: 0.75rem 2rem;
+  background-color: var(--bg-color-dark-cyan, #13829b);
+  border: none;
+  border-radius: 0.5rem;
+  transition: border-color 200ms;
+}
+
+.header__nav-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+}
+
+.header__nav-button:active {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .header__content {
+    padding: 1rem;
+  }
+}
+`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"AAGA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,wBAAwB;EACxB,+BAA+B;EAC/B,gCAAgC;EAChC,qCAAqC;EACrC,wBAAwB;EACxB,6BAA6B;EAC7B,2BAA2B;EAC3B,gCAAgC;AAClC;;AAEA;EACE,eAAe;EACf,sCAAsC;AACxC;;AAEA;;;;;;EAME,eAAe;EACf,SAAS;EACT,UAAU;AACZ;;AAEA;;;EAGE,qBAAqB;EACrB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA,mCAAmC;AACnC;EACE,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,mBAAmB;EACnB,kBAAkB;EAClB,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,SAAS;EACT,iBAAiB;AACnB;;AAEA;EACE,6CAA6C;EAC7C,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;EAChB,oCAAoC;EACpC,0BAA0B;EAC1B,gCAAgC;EAChC,mBAAmB;EACnB,iBAAiB;EACjB,qBAAqB;EACrB,uCAAuC;EACvC,mCAAmC;EACnC,6BAA6B;AAC/B;;AAEA;EACE,gCAAgC;AAClC;;AAEA;EACE,6BAA6B;EAC7B,4CAA4C;AAC9C;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,6CAA6C;EAC7C,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,oCAAoC;EACpC,mBAAmB;EACnB,qBAAqB;EACrB,oDAAoD;EACpD,YAAY;EACZ,qBAAqB;EACrB,8BAA8B;AAChC;;AAEA;EACE,0DAA0D;AAC5D;;AAEA;EACE,iDAAiD;AACnD;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  text-underline-offset: 0.5rem;\n  transition: text-underline-offset 100ms ease;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n  transition: border-color 200ms;\n}\n\n.header__nav-button:hover {\n  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;\n}\n\n.header__nav-button:active {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n\n@media screen and (max-width: 900px) {\n  .header__content {\n    padding: 1rem;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -933,4 +1047,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundleb7d6344b3e33cfc570d0.js.map
+//# sourceMappingURL=bundlefbe645abb4a343471ce6.js.map

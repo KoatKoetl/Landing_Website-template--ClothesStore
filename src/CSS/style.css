@@ -4,11 +4,14 @@
 :root {
   --font-color-primary: #333;
   --font-color-white: #fff;
+  --font-color-black: #000;
   --font-color-dark-blue: #13829b;
   --bg-color-light-orange: #fcc29a;
   --bg-color-very-light-orange: #fde9c9;
   --bg-color-cyan: #29d2e4;
   --bg-color-dark-cyan: #13829b;
+  --font-family-primary: Lato;
+  --font-family-secondary: Raleway;
 }
 
 body {
@@ -35,15 +38,80 @@ li {
   padding: 0;
 }
 
-a,
-a:hover,
-a:active,
-a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
 p {
   margin: 0;
   padding: 0;
+}
+
+/* Styling website primary header */
+.header__content {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  border-bottom: 3px solid #000;
+}
+
+.header__nav-links-list {
+  display: flex;
+  gap: 4rem;
+  padding-top: 1rem;
+}
+
+.header__nav-link {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--font-color-black, #000);
+  text-decoration: underline;
+  text-decoration-color: #00000000;
+  line-height: normal;
+  padding: 0.425rem;
+  border-radius: 0.5rem;
+  transition: text-decoration-color 250ms;
+  text-decoration-thickness: 0.625rem;
+  text-underline-offset: 1.9rem;
+}
+
+.header__nav-link:hover {
+  text-decoration-color: #000000ff;
+}
+
+.header__nav-link:active {
+  text-underline-offset: 0.5rem;
+  transition: text-underline-offset 100ms ease;
+}
+
+.header__nav--secondary {
+  align-self: flex-end;
+}
+
+.header__nav-button {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--font-color-white, #fff);
+  line-height: normal;
+  padding: 0.75rem 2rem;
+  background-color: var(--bg-color-dark-cyan, #13829b);
+  border: none;
+  border-radius: 0.5rem;
+  transition: border-color 200ms;
+}
+
+.header__nav-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+}
+
+.header__nav-button:active {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .header__content {
+    padding: 1rem;
+  }
 }

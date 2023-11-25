@@ -17,6 +17,7 @@
 body {
   font-size: 1rem;
   color: var(--font-color-primary, #333);
+  position: relative;
 }
 
 h1,
@@ -49,6 +50,7 @@ p {
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
   padding: 1rem 5rem;
   border-bottom: 3px solid #000;
 }
@@ -80,8 +82,8 @@ p {
 }
 
 .header__nav-link:active {
-  text-underline-offset: 0.5rem;
   transition: text-underline-offset 100ms ease;
+  text-underline-offset: 0.5rem;
 }
 
 .header__nav--secondary {
@@ -99,15 +101,80 @@ p {
   background-color: var(--bg-color-dark-cyan, #13829b);
   border: none;
   border-radius: 0.5rem;
-  transition: border-color 200ms;
+  transition: transform 100ms;
 }
 
 .header__nav-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+  transform: scale(1.05);
 }
 
 .header__nav-button:active {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1);
+}
+
+/* Styling main section */
+
+.donate-section {
+  padding-left: 5rem;
+}
+
+.donate-section__tag-list {
+  list-style-position: inside;
+  list-style-image: url(../assets/list-style-hyphen.svg);
+}
+
+.donate-section__tag-list-element {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--bg-color-dark-cyan, #13829b);
+  line-height: normal;
+}
+
+.donate-section__title {
+  font-family: var(--font-family-secondary, Raleway);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--font-color-primary, #333);
+  line-height: normal;
+  position: relative;
+  margin-bottom: 2.75rem;
+}
+
+.donate-section__title--highlighted {
+  font-family: var(--font-family-secondary, Raleway);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--bg-color-dark-cyan, #13829b);
+  text-decoration: underline;
+  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);
+  line-height: normal;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.625rem;
+}
+
+.donate-section__title-block-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-image: url(../assets/section-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+}
+
+.donate-section__desctiption {
+  color: var(--font-color-primary, #333);
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8125rem; /* 161.111% */
 }
 
 @media screen and (max-width: 900px) {

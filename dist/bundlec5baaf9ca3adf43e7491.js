@@ -392,13 +392,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!../../node_modules/normalize.css/normalize.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/normalize.css/normalize.css");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__);
 // Imports
 
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/list-style-hyphen.svg */ "./src/assets/list-style-hyphen.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/section-icon.svg */ "./src/assets/section-icon.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/open-more-in_circrle-arrow.svg */ "./src/assets/open-more-in_circrle-arrow.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `:root {
   --font-color-primary: #333;
@@ -416,6 +425,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `:root {
 body {
   font-size: 1rem;
   color: var(--font-color-primary, #333);
+  position: relative;
 }
 
 h1,
@@ -448,6 +458,7 @@ p {
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
   padding: 1rem 5rem;
   border-bottom: 3px solid #000;
 }
@@ -479,8 +490,8 @@ p {
 }
 
 .header__nav-link:active {
-  text-underline-offset: 0.5rem;
   transition: text-underline-offset 100ms ease;
+  text-underline-offset: 0.5rem;
 }
 
 .header__nav--secondary {
@@ -498,15 +509,127 @@ p {
   background-color: var(--bg-color-dark-cyan, #13829b);
   border: none;
   border-radius: 0.5rem;
-  transition: border-color 200ms;
 }
 
-.header__nav-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;
+.button--click-animation {
+  transition: transform 100ms;
 }
 
-.header__nav-button:active {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.button--click-animation:hover {
+  transform: scale(1.05);
+}
+
+.button--click-animation:active {
+  transform: scale(1);
+}
+
+/* Styling main section */
+
+.donate-section {
+  padding-left: 5rem;
+}
+
+.donate-section__tag-list {
+  list-style-position: inside;
+  list-style-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+.donate-section__tag-list-element {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--bg-color-dark-cyan, #13829b);
+  line-height: normal;
+}
+
+.donate-section__title {
+  font-family: var(--font-family-secondary, Raleway);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--font-color-primary, #333);
+  line-height: normal;
+  position: relative;
+  margin-bottom: 2.75rem;
+}
+
+.donate-section__title--highlighted {
+  font-family: var(--font-family-secondary, Raleway);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--bg-color-dark-cyan, #13829b);
+  text-decoration: underline;
+  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);
+  line-height: normal;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 0.625rem;
+}
+
+.donate-section__title-block-icon {
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.donate-section__desctiption {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--font-color-primary, #333);
+  line-height: 1.8125rem; /* 161.111% */
+  margin-bottom: 2.5rem;
+}
+
+.donate-section__support-block {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.donate-section__button {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--font-color-white, #fff);
+  line-height: normal;
+  gap: 1rem;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color-dark-cyan, #13829b);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.donate-section__support-block--extra {
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.donate-section__support-block-icon {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
+.donate-section__support-block-title {
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--font-color-primary, #333);
+  line-height: 1.8125rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -514,7 +637,7 @@ p {
     padding: 1rem;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"AAGA;EACE,0BAA0B;EAC1B,wBAAwB;EACxB,wBAAwB;EACxB,+BAA+B;EAC/B,gCAAgC;EAChC,qCAAqC;EACrC,wBAAwB;EACxB,6BAA6B;EAC7B,2BAA2B;EAC3B,gCAAgC;AAClC;;AAEA;EACE,eAAe;EACf,sCAAsC;AACxC;;AAEA;;;;;;EAME,eAAe;EACf,SAAS;EACT,UAAU;AACZ;;AAEA;;;EAGE,qBAAqB;EACrB,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA,mCAAmC;AACnC;EACE,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,mBAAmB;EACnB,kBAAkB;EAClB,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,SAAS;EACT,iBAAiB;AACnB;;AAEA;EACE,6CAA6C;EAC7C,mBAAmB;EACnB,kBAAkB;EAClB,gBAAgB;EAChB,oCAAoC;EACpC,0BAA0B;EAC1B,gCAAgC;EAChC,mBAAmB;EACnB,iBAAiB;EACjB,qBAAqB;EACrB,uCAAuC;EACvC,mCAAmC;EACnC,6BAA6B;AAC/B;;AAEA;EACE,gCAAgC;AAClC;;AAEA;EACE,6BAA6B;EAC7B,4CAA4C;AAC9C;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,6CAA6C;EAC7C,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,oCAAoC;EACpC,mBAAmB;EACnB,qBAAqB;EACrB,oDAAoD;EACpD,YAAY;EACZ,qBAAqB;EACrB,8BAA8B;AAChC;;AAEA;EACE,0DAA0D;AAC5D;;AAEA;EACE,iDAAiD;AACnD;;AAEA;EACE;IACE,aAAa;EACf;AACF","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  text-underline-offset: 0.5rem;\n  transition: text-underline-offset 100ms ease;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n  transition: border-color 200ms;\n}\n\n.header__nav-button:hover {\n  box-shadow: rgba(0, 0, 0, 0.35) 0px -30px 36px -28px inset;\n}\n\n.header__nav-button:active {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n\n@media screen and (max-width: 900px) {\n  .header__content {\n    padding: 1rem;\n  }\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n  position: relative;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  transition: text-underline-offset 100ms ease;\n  text-underline-offset: 0.5rem;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.button--click-animation {\n  transition: transform 100ms;\n}\n\n.button--click-animation:hover {\n  transform: scale(1.05);\n}\n\n.button--click-animation:active {\n  transform: scale(1);\n}\n\n/* Styling main section */\n\n.donate-section {\n  padding-left: 5rem;\n}\n\n.donate-section__tag-list {\n  list-style-position: inside;\n  list-style-image: url(../assets/list-style-hyphen.svg);\n}\n\n.donate-section__tag-list-element {\n  font-family: Lato;\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--bg-color-dark-cyan, #13829b);\n  line-height: normal;\n}\n\n.donate-section__title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  position: relative;\n  margin-bottom: 2.75rem;\n}\n\n.donate-section__title--highlighted {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--bg-color-dark-cyan, #13829b);\n  text-decoration: underline;\n  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);\n  line-height: normal;\n  text-underline-offset: 1rem;\n  text-decoration-thickness: 0.625rem;\n}\n\n.donate-section__title-block-icon {\n  position: absolute;\n  right: 3rem;\n  bottom: 0;\n  width: 3.2rem;\n  height: 3.2rem;\n  background-image: url(../assets/section-icon.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.donate-section__desctiption {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem; /* 161.111% */\n  margin-bottom: 2.5rem;\n}\n\n.donate-section__support-block {\n  display: flex;\n  gap: 4rem;\n  align-items: center;\n}\n\n.donate-section__button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.25rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  gap: 1rem;\n  padding: 1.5rem 3.5rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.donate-section__support-block--extra {\n  text-decoration: none;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n}\n\n.donate-section__support-block-icon {\n  display: block;\n  width: 3rem;\n  height: 3rem;\n  background-image: url(../assets/open-more-in_circrle-arrow.svg);\n}\n\n.donate-section__support-block-title {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem;\n}\n\n@media screen and (max-width: 900px) {\n  .header__content {\n    padding: 1rem;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -611,6 +734,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -959,6 +1117,36 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/list-style-hyphen.svg":
+/*!******************************************!*\
+  !*** ./src/assets/list-style-hyphen.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/list-style-hyphen.svg";
+
+/***/ }),
+
+/***/ "./src/assets/open-more-in_circrle-arrow.svg":
+/*!***************************************************!*\
+  !*** ./src/assets/open-more-in_circrle-arrow.svg ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/open-more-in_circrle-arrow.svg";
+
+/***/ }),
+
+/***/ "./src/assets/section-icon.svg":
+/*!*************************************!*\
+  !*** ./src/assets/section-icon.svg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/section-icon.svg";
+
 /***/ })
 
 /******/ 	});
@@ -987,6 +1175,9 @@ module.exports = styleTagTransform;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -1012,6 +1203,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1026,6 +1229,55 @@ module.exports = styleTagTransform;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"bundle": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -1047,4 +1299,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlefbe645abb4a343471ce6.js.map
+//# sourceMappingURL=bundlec5baaf9ca3adf43e7491.js.map

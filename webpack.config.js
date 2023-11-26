@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name][contenthash].js',
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   devtool: 'source-map',
   devServer: {
@@ -41,10 +41,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        loader: 'file-loader',
-        options: {
-          name: '/images&icons/[name].[ext]',
-        },
       },
     ],
   },

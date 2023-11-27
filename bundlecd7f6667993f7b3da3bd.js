@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/normalize.css/normalize.css":
@@ -8,6 +7,7 @@
   \****************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -383,6 +383,7 @@ template {
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -527,6 +528,17 @@ p {
 
 .donate-section {
   padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.donate-section__text-content {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  flex-basis: 50%;
 }
 
 .donate-section__tag-list {
@@ -579,6 +591,12 @@ p {
   background-size: cover;
 }
 
+@media screen and (max-width: 1150px) {
+  .donate-section__title-block-icon {
+    right: 0;
+  }
+}
+
 .donate-section__desctiption {
   font-family: var(--font-family-primary, Lato);
   font-size: 1.125rem;
@@ -587,6 +605,7 @@ p {
   color: var(--font-color-primary, #333);
   line-height: 1.8125rem; /* 161.111% */
   margin-bottom: 2.5rem;
+  max-width: 80%;
 }
 
 .donate-section__support-block {
@@ -632,12 +651,53 @@ p {
   line-height: 1.8125rem;
 }
 
+.donate-section__image-content {
+  position: relative;
+  flex-basis: 50%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.donate-section__image-content--1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.donate-section__image-content--2 {
+  position: relative;
+  z-index: 1;
+}
+
+.donate-section__image-content-rectangle {
+  width: 100%;
+  height: 19.5rem;
+  background-color: var(--bg-color-light-orange, #fcc29a);
+  position: absolute;
+  right: 0;
+  bottom: -4.88rem;
+  z-index: 0;
+}
+
 @media screen and (max-width: 900px) {
   .header__content {
     padding: 1rem;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n  position: relative;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  transition: text-underline-offset 100ms ease;\n  text-underline-offset: 0.5rem;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.button--click-animation {\n  transition: transform 100ms;\n}\n\n.button--click-animation:hover {\n  transform: scale(1.05);\n}\n\n.button--click-animation:active {\n  transform: scale(1);\n}\n\n/* Styling main section */\n\n.donate-section {\n  padding-left: 5rem;\n}\n\n.donate-section__tag-list {\n  list-style-position: inside;\n  list-style-image: url(../assets/list-style-hyphen.svg);\n}\n\n.donate-section__tag-list-element {\n  font-family: Lato;\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--bg-color-dark-cyan, #13829b);\n  line-height: normal;\n}\n\n.donate-section__title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  position: relative;\n  margin-bottom: 2.75rem;\n}\n\n.donate-section__title--highlighted {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--bg-color-dark-cyan, #13829b);\n  text-decoration: underline;\n  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);\n  line-height: normal;\n  text-underline-offset: 1rem;\n  text-decoration-thickness: 0.625rem;\n}\n\n.donate-section__title-block-icon {\n  position: absolute;\n  right: 3rem;\n  bottom: 0;\n  width: 3.2rem;\n  height: 3.2rem;\n  background-image: url(../assets/section-icon.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.donate-section__desctiption {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem; /* 161.111% */\n  margin-bottom: 2.5rem;\n}\n\n.donate-section__support-block {\n  display: flex;\n  gap: 4rem;\n  align-items: center;\n}\n\n.donate-section__button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.25rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  gap: 1rem;\n  padding: 1.5rem 3.5rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.donate-section__support-block--extra {\n  text-decoration: none;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n}\n\n.donate-section__support-block-icon {\n  display: block;\n  width: 3rem;\n  height: 3rem;\n  background-image: url(../assets/open-more-in_circrle-arrow.svg);\n}\n\n.donate-section__support-block-title {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem;\n}\n\n@media screen and (max-width: 900px) {\n  .header__content {\n    padding: 1rem;\n  }\n}\n"],"sourceRoot":""}]);
+
+@media screen and (max-width: 1295px) {
+  .donate-section__text-content {
+    padding-right: 5rem;
+  }
+  .donate-section__image-content-rectangle {
+    bottom: 30%;
+    width: 90vw;
+    height: 9rem;
+  }
+}
+
+/* Download the another medium image */
+`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n  position: relative;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  transition: text-underline-offset 100ms ease;\n  text-underline-offset: 0.5rem;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.button--click-animation {\n  transition: transform 100ms;\n}\n\n.button--click-animation:hover {\n  transform: scale(1.05);\n}\n\n.button--click-animation:active {\n  transform: scale(1);\n}\n\n/* Styling main section */\n\n.donate-section {\n  padding-left: 5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n\n.donate-section__text-content {\n  position: relative;\n  z-index: 1;\n  flex-grow: 1;\n  flex-basis: 50%;\n}\n\n.donate-section__tag-list {\n  list-style-position: inside;\n  list-style-image: url(../assets/list-style-hyphen.svg);\n}\n\n.donate-section__tag-list-element {\n  font-family: Lato;\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--bg-color-dark-cyan, #13829b);\n  line-height: normal;\n}\n\n.donate-section__title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  position: relative;\n  margin-bottom: 2.75rem;\n}\n\n.donate-section__title--highlighted {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--bg-color-dark-cyan, #13829b);\n  text-decoration: underline;\n  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);\n  line-height: normal;\n  text-underline-offset: 1rem;\n  text-decoration-thickness: 0.625rem;\n}\n\n.donate-section__title-block-icon {\n  position: absolute;\n  right: 3rem;\n  bottom: 0;\n  width: 3.2rem;\n  height: 3.2rem;\n  background-image: url(../assets/section-icon.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n@media screen and (max-width: 1150px) {\n  .donate-section__title-block-icon {\n    right: 0;\n  }\n}\n\n.donate-section__desctiption {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem; /* 161.111% */\n  margin-bottom: 2.5rem;\n  max-width: 80%;\n}\n\n.donate-section__support-block {\n  display: flex;\n  gap: 4rem;\n  align-items: center;\n}\n\n.donate-section__button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.25rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  gap: 1rem;\n  padding: 1.5rem 3.5rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.donate-section__support-block--extra {\n  text-decoration: none;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n}\n\n.donate-section__support-block-icon {\n  display: block;\n  width: 3rem;\n  height: 3rem;\n  background-image: url(../assets/open-more-in_circrle-arrow.svg);\n}\n\n.donate-section__support-block-title {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem;\n}\n\n.donate-section__image-content {\n  position: relative;\n  flex-basis: 50%;\n  flex-grow: 1;\n  display: flex;\n  justify-content: end;\n}\n\n.donate-section__image-content--1 {\n  position: absolute;\n  z-index: 0;\n}\n\n.donate-section__image-content--2 {\n  position: relative;\n  z-index: 1;\n}\n\n.donate-section__image-content-rectangle {\n  width: 100%;\n  height: 19.5rem;\n  background-color: var(--bg-color-light-orange, #fcc29a);\n  position: absolute;\n  right: 0;\n  bottom: -4.88rem;\n  z-index: 0;\n}\n\n@media screen and (max-width: 900px) {\n  .header__content {\n    padding: 1rem;\n  }\n}\n\n@media screen and (max-width: 1295px) {\n  .donate-section__text-content {\n    padding-right: 5rem;\n  }\n  .donate-section__image-content-rectangle {\n    bottom: 30%;\n    width: 90vw;\n    height: 9rem;\n  }\n}\n\n/* Download the another medium image */\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -650,6 +710,7 @@ p {
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -744,6 +805,7 @@ module.exports = function (cssWithMappingToString) {
   \********************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (url, options) {
@@ -779,6 +841,7 @@ module.exports = function (url, options) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -804,6 +867,7 @@ module.exports = function (item) {
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -858,6 +922,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -951,6 +1016,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -994,6 +1060,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -1013,6 +1080,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -1032,6 +1100,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -1102,6 +1171,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -1119,12 +1189,95 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets sync recursive ^\\.\\/.*$":
+/*!***********************************!*\
+  !*** ./src/assets/ sync ^\.\/.*$ ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./bg-image-clothes-142w.png": "./src/assets/bg-image-clothes-142w.png",
+	"./bg-image-clothes-608w.png": "./src/assets/bg-image-clothes-608w.png",
+	"./kids-selfie-100w.png": "./src/assets/kids-selfie-100w.png",
+	"./kids-selfie-233w.png": "./src/assets/kids-selfie-233w.png",
+	"./list-style-hyphen.svg": "./src/assets/list-style-hyphen.svg",
+	"./open-more-in_circrle-arrow.svg": "./src/assets/open-more-in_circrle-arrow.svg",
+	"./section-icon.svg": "./src/assets/section-icon.svg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/assets sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./src/assets/bg-image-clothes-142w.png":
+/*!**********************************************!*\
+  !*** ./src/assets/bg-image-clothes-142w.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/bg-image-clothes-142w.png";
+
+/***/ }),
+
+/***/ "./src/assets/bg-image-clothes-608w.png":
+/*!**********************************************!*\
+  !*** ./src/assets/bg-image-clothes-608w.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/bg-image-clothes-608w.png";
+
+/***/ }),
+
+/***/ "./src/assets/kids-selfie-100w.png":
+/*!*****************************************!*\
+  !*** ./src/assets/kids-selfie-100w.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/kids-selfie-100w.png";
+
+/***/ }),
+
+/***/ "./src/assets/kids-selfie-233w.png":
+/*!*****************************************!*\
+  !*** ./src/assets/kids-selfie-233w.png ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/kids-selfie-233w.png";
+
+/***/ }),
+
 /***/ "./src/assets/list-style-hyphen.svg":
 /*!******************************************!*\
   !*** ./src/assets/list-style-hyphen.svg ***!
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "assets/list-style-hyphen.svg";
 
 /***/ }),
@@ -1135,6 +1288,7 @@ module.exports = __webpack_require__.p + "assets/list-style-hyphen.svg";
   \***************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "assets/open-more-in_circrle-arrow.svg";
 
 /***/ }),
@@ -1145,6 +1299,7 @@ module.exports = __webpack_require__.p + "assets/open-more-in_circrle-arrow.svg"
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "assets/section-icon.svg";
 
 /***/ })
@@ -1287,16 +1442,19 @@ module.exports = __webpack_require__.p + "assets/section-icon.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CSS_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CSS/style.css */ "./src/CSS/style.css");
 
+// Load all assets
+__webpack_require__("./src/assets sync recursive ^\\.\\/.*$");
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlec5baaf9ca3adf43e7491.js.map
+//# sourceMappingURL=bundlecd7f6667993f7b3da3bd.js.map

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clothes Store</title>
-  <script defer src="bundlefbe645abb4a343471ce6.js"></script></head>
+  <script defer src="bundlecd7f6667993f7b3da3bd.js"></script></head>
   <body>
-    <header class="header">
+    <header class="header header--primary">
       <div class="header__content">
         <div class="header__content-logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -24,9 +24,56 @@
         </nav>
 
         <div class="header__nav header__nav--secondary">
-          <button class="button header__nav-button">Log In</button>
+          <button class="button button--click-animation header__nav-button">Log In</button>
         </div>
       </div>
     </header>
+
+    <main>
+      <section aria-labelledby="#" class="donate-section">
+        <div class="donate-section__text-content">
+          <ul class="donate-section__tag-list">
+            <li class="donate-section__tag-list-element">GEORGESKETCH</li>
+          </ul>
+          <div class="donate-section__title-block">
+            <h1 class="donate-section__title">
+              Lorem ipsum dolor sit amet,
+              <a href="#" class="donate-section__title--highlighted">consectetur</a>
+              adipiscing
+              <div class="donate-section__title-block-icon"></div>
+            </h1>
+          </div>
+          <p class="donate-section__desctiption">
+            Donation is one of the best ways to create impact in society. We help connect people who are in need with others who can help
+            with the necessary supplies
+          </p>
+          <div class="donate-section__support-block">
+            <button class="button button--click-animation donate-section__button">Donate</button>
+            <a href="#" class="donate-section__support-block--extra">
+              <div class="donate-section__support-block-icon"></div>
+              <span class="donate-section__support-block-title">Learn More</span>
+            </a>
+          </div>
+        </div>
+        <img class="donate-section__image-content">
+          <img
+            srcset="assets/kids-selfie-100w.png 100w, assets/kids-selfie-233w.png 233w"
+            sizes="(max-width: 390px) 100px, 233px"
+            src="assets/kids-selfie-233w.png"
+            alt="happy kids selfie"
+            class="donate-section__image-content--1"
+          />
+          <img
+            srcset="assets/bg-image-clothes-608w.png 608w, assets/bg-image-clothes-304w.png 304w, assets/bg-image-clothes-142w.png 142w"
+            sizes="(min-width: 950px) 608px , 50vw"
+            src="assets/bg-image-clothes-304w.jpeg"
+            alt="bunch of clothes"
+            class="donate-section__image-content--2"
+          />
+          <div class="donate-section__image-content-square"></div>
+          <div class="donate-section__image-content-rectangle"></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

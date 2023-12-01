@@ -579,16 +579,19 @@ p {
   text-decoration-thickness: 0.625rem;
 }
 
-.donate-section__title-block-icon {
-  position: absolute;
-  right: 3rem;
-  bottom: 0;
+.section__title-icon {
   width: 3.2rem;
   height: 3.2rem;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.donate-section__title-block-icon {
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
 }
 
 .donate-section__desctiption {
@@ -686,7 +689,7 @@ p {
   background-color: var(--bg-color-light-orange, #fcc29a);
 }
 
-/* Second section of website styling */
+/* Second section styling */
 .additional-info-section__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, 400px);
@@ -697,9 +700,9 @@ p {
 
 .additional-info-section__content-item {
   display: grid;
-  justify-items: center;
-  border-right: 0.3rem solid #fcc29a;
   padding: 1rem;
+  border-right: 0.3rem solid #fcc29a;
+  justify-items: center;
 }
 
 .additional-info-section__content-item:last-child {
@@ -718,9 +721,9 @@ p {
   font-style: normal;
   font-weight: 600;
   color: var(--font-color-primary, #333);
+  text-align: center;
   line-height: normal;
   margin-bottom: 1.25rem;
-  text-align: center;
 }
 
 .additional-info-section__content-item-link {
@@ -731,9 +734,9 @@ p {
 
 .additional-info-section__content-item-link:hover {
   text-decoration: underline;
+  text-decoration-color: var(--font-color-primary, #333);
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.2rem;
-  text-decoration-color: var(--font-color-primary, #333);
 }
 
 .additional-info-section__content-item-link-title {
@@ -751,14 +754,91 @@ p {
   height: 1.125rem;
 }
 
+/* Product section (third section)*/
+.product-section__content {
+  padding: 0 5rem;
+  display: grid;
+  grid-gap: 15rem;
+  justify-items: center;
+}
+
+.product-section__content-item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  justify-items: center;
+  align-items: center;
+  grid-gap: 3rem;
+}
+
+.product-section__content-item-title {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  gap: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-section__content-item-desctiption {
+  max-width: 80%;
+  color: var(--font-color-primary, #333);
+  font-family: var(--font-family-primary, Lato);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.product-section__content-item-image {
+  box-shadow: -8rem -3rem var(--bg-color-light-orange, #fcc29a);
+}
+
+.product-section__content-item--2 {
+  justify-items: flex-start;
+}
+
+.product-section__content-item--2 > .product-section__content-item-text-content {
+  order: 1;
+}
+
+.product-section__content-item--2 .product-section__content-item-image {
+  box-shadow: 8rem -3rem var(--bg-color-cyan, #29d2e4);
+}
+
 @media screen and (max-width: 1600px) {
   /* Additional-section media querry*/
   .additional-info-section__content-item:nth-child(3) {
     border-right: none;
   }
   .additional-info-section__content-item:last-child {
-    grid-row: 2/3;
     grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  /* Product section (third section) media query */
+  .product-section__content {
+    grid-gap: 5rem;
+    align-items: center;
+  }
+  .product-section__content-item {
+    max-width: 70vw;
+    justify-items: flex-start;
+  }
+  .product-section__content-item-image-block {
+    justify-self: center;
+  }
+  .product-section__content-item--2 > .product-section__content-item-image-block {
+    justify-self: center;
+  }
+  .product-section__content-item-desctiption {
+    max-width: 100%;
+  }
+  .product-section__content-item .product-section__content-item-text-content {
+    order: 1;
   }
 }
 
@@ -797,8 +877,13 @@ p {
     border-right: 0.3rem solid #fcc29a;
   }
   .additional-info-section__content-item:last-child {
-    grid-row: auto;
     grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Product section (third section) media query */
+  .product-section__content-item--2 > .product-section__content-item-image-block {
+    justify-self: flex-start;
   }
 }
 
@@ -841,8 +926,16 @@ p {
     border-bottom: 0.3rem solid #fcc29a;
     border-radius: 2rem;
   }
+
+  /* Product section (third section) media query */
+  .product-section__content {
+    padding: 0 1rem;
+  }
+  .product-section__content-item {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
-`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n  position: relative;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  transition: text-underline-offset 100ms ease;\n  text-underline-offset: 0.5rem;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.button--click-animation {\n  transition: transform 100ms;\n}\n\n.button--click-animation:hover {\n  transform: scale(1.05);\n}\n\n.button--click-animation:active {\n  transform: scale(1);\n}\n\n/* Styling main section */\n.donate-section {\n  display: grid;\n  grid-auto-flow: column;\n  grid-template-columns: 1fr 1.2fr;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 15rem;\n  padding-left: 5rem;\n}\n\n.donate-section__text-content {\n  position: relative;\n  z-index: 1;\n}\n\n.donate-section__tag-list {\n  list-style-position: inside;\n  list-style-image: url(../assets/list-style-hyphen.svg);\n}\n\n.donate-section__tag-list-element {\n  font-family: Lato;\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--bg-color-dark-cyan, #13829b);\n  line-height: normal;\n}\n\n.donate-section__title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  position: relative;\n  margin-bottom: 2.75rem;\n  max-width: 90%;\n}\n\n.donate-section__title--highlighted {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--bg-color-dark-cyan, #13829b);\n  text-decoration: underline;\n  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);\n  line-height: normal;\n  text-underline-offset: 1rem;\n  text-decoration-thickness: 0.625rem;\n}\n\n.donate-section__title-block-icon {\n  position: absolute;\n  right: 3rem;\n  bottom: 0;\n  width: 3.2rem;\n  height: 3.2rem;\n  background-image: url(../assets/section-icon.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.donate-section__desctiption {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem; /* 161.111% */\n  margin-bottom: 2.5rem;\n  max-width: 70%;\n}\n\n.donate-section__support-block {\n  display: flex;\n  gap: 4rem;\n  align-items: center;\n}\n\n.donate-section__button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.25rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  gap: 1rem;\n  padding: 1.5rem 3.5rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.donate-section__support-block--extra {\n  text-decoration: none;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n}\n\n.donate-section__support-block-icon {\n  display: block;\n  width: 3rem;\n  height: 3rem;\n  background-image: url(../assets/open-more-in_circrle-arrow.svg);\n}\n\n.donate-section__support-block-title {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem;\n}\n\n.donate-section__image-content {\n  display: grid;\n  position: relative;\n  justify-content: right;\n}\n\n.donate-section__image-content--kids-image {\n  position: absolute;\n  z-index: 3;\n  top: 8rem;\n  right: 65%;\n  border: 5px solid white;\n  border-radius: 15rem;\n  filter: grayscale(100%);\n}\n\n.donate-section__image-content-block--clothes-image {\n  position: relative;\n  z-index: 1;\n}\n\n.donate-section__image-content-square--blue-transparent {\n  position: absolute;\n  bottom: 15%;\n  left: 15%;\n  width: 30%;\n  height: 27%;\n  background-color: var(--bg-color-cyan, #29d2e4);\n  mix-blend-mode: multiply;\n}\n\n.donate-section__image-content-rectangle {\n  position: absolute;\n  z-index: 0;\n  right: 0;\n  bottom: -5rem;\n  width: 100%;\n  height: 19rem;\n  background-color: var(--bg-color-light-orange, #fcc29a);\n}\n\n/* Second section of website styling */\n.additional-info-section__content {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, 400px);\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 14rem;\n}\n\n.additional-info-section__content-item {\n  display: grid;\n  justify-items: center;\n  border-right: 0.3rem solid #fcc29a;\n  padding: 1rem;\n}\n\n.additional-info-section__content-item:last-child {\n  border: none;\n}\n\n.additional-info-section__content-item-icon {\n  margin-bottom: 1.7rem;\n  width: 3.0625rem;\n  height: 2.875rem;\n}\n\n.additional-info-section__content-item-title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 1.5rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  margin-bottom: 1.25rem;\n  text-align: center;\n}\n\n.additional-info-section__content-item-link {\n  text-decoration: none;\n  display: flex;\n  gap: 0.5rem;\n}\n\n.additional-info-section__content-item-link:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.3rem;\n  text-decoration-thickness: 0.2rem;\n  text-decoration-color: var(--font-color-primary, #333);\n}\n\n.additional-info-section__content-item-link-title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  text-transform: uppercase;\n  line-height: normal;\n}\n\n.additional-info-section__content-item-link-icon {\n  width: 1.125rem;\n  height: 1.125rem;\n}\n\n@media screen and (max-width: 1600px) {\n  /* Additional-section media querry*/\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:last-child {\n    grid-row: 2/3;\n    grid-column: 2/3;\n  }\n}\n\n@media screen and (max-width: 1200px) {\n  /* Donate Section(Main block) media query */\n  .donate-section {\n    grid-auto-flow: row;\n    grid-gap: 1.5rem;\n    grid-template-columns: auto;\n    margin-bottom: 5rem;\n  }\n\n  .donate-section__title-block-icon {\n    right: 0;\n  }\n\n  .donate-section__image-content--kids-image {\n    top: 30%;\n    left: 0;\n  }\n  .donate-section__image-content-rectangle {\n    bottom: 30%;\n    width: 100%;\n    height: 20%;\n  }\n\n  /* Additional-section(Second section) media query */\n  .additional-info-section__content {\n    grid-gap: 1rem;\n    margin-bottom: 7rem;\n  }\n  .additional-info-section__content-item:nth-child(2) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: 0.3rem solid #fcc29a;\n  }\n  .additional-info-section__content-item:last-child {\n    grid-row: auto;\n    grid-column: auto;\n  }\n}\n\n@media screen and (max-width: 900px) {\n  /* Primary header media query */\n  .header__content {\n    padding: 1rem;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  /* Donate Section(Main block) media query */\n  .donate-section__title {\n    margin-bottom: 0;\n  }\n  .donate-section__title-block-icon {\n    position: relative;\n    margin-left: 90%;\n  }\n  .donate-section {\n    padding-left: 1rem;\n  }\n  .donate-section__support-block {\n    gap: 1rem;\n  }\n\n  /* Additional-section(Second section) media query */\n  .additional-info-section__content {\n    justify-items: center;\n  }\n  .additional-info-section__content-item {\n    border-right: none;\n    border-bottom: 0.3rem solid #fcc29a;\n    border-radius: 2rem;\n  }\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:last-child {\n    border-bottom: 0.3rem solid #fcc29a;\n    border-radius: 2rem;\n  }\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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;EACA;IACE,eAAe;IACf,yBAAyB;EAC3B;EACA;IACE,oBAAoB;EACtB;EACA;IACE,oBAAoB;EACtB;EACA;IACE,eAAe;EACjB;EACA;IACE,QAAQ;EACV;AACF;;AAEA;EACE,2CAA2C;EAC3C;IACE,mBAAmB;IACnB,gBAAgB;IAChB,2BAA2B;IAC3B,mBAAmB;EACrB;;EAEA;IACE,QAAQ;EACV;;EAEA;IACE,QAAQ;IACR,OAAO;EACT;EACA;IACE,WAAW;IACX,WAAW;IACX,WAAW;EACb;;EAEA,mDAAmD;EACnD;IACE,cAAc;IACd,mBAAmB;EACrB;EACA;IACE,kBAAkB;EACpB;EACA;IACE,kCAAkC;EACpC;EACA;IACE,iBAAiB;IACjB,cAAc;EAChB;;EAEA,gDAAgD;EAChD;IACE,wBAAwB;EAC1B;AACF;;AAEA;EACE,+BAA+B;EAC/B;IACE,aAAa;EACf;AACF;;AAEA;EACE,2CAA2C;EAC3C;IACE,gBAAgB;EAClB;EACA;IACE,kBAAkB;IAClB,gBAAgB;EAClB;EACA;IACE,kBAAkB;EACpB;EACA;IACE,SAAS;EACX;;EAEA,mDAAmD;EACnD;IACE,qBAAqB;EACvB;EACA;IACE,kBAAkB;IAClB,mCAAmC;IACnC,mBAAmB;EACrB;EACA;IACE,kBAAkB;EACpB;EACA;IACE,mCAAmC;IACnC,mBAAmB;EACrB;;EAEA,gDAAgD;EAChD;IACE,eAAe;EACjB;EACA;IACE,2DAA2D;EAC7D;AACF","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');\n\n:root {\n  --font-color-primary: #333;\n  --font-color-white: #fff;\n  --font-color-black: #000;\n  --font-color-dark-blue: #13829b;\n  --bg-color-light-orange: #fcc29a;\n  --bg-color-very-light-orange: #fde9c9;\n  --bg-color-cyan: #29d2e4;\n  --bg-color-dark-cyan: #13829b;\n  --font-family-primary: Lato;\n  --font-family-secondary: Raleway;\n}\n\nbody {\n  font-size: 1rem;\n  color: var(--font-color-primary, #333);\n  position: relative;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\nul,\nol,\nli {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\np {\n  margin: 0;\n  padding: 0;\n}\n\n/* Styling website primary header */\n.header__content {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 1rem;\n  padding: 1rem 5rem;\n  border-bottom: 3px solid #000;\n}\n\n.header__nav-links-list {\n  display: flex;\n  gap: 4rem;\n  padding-top: 1rem;\n}\n\n.header__nav-link {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-black, #000);\n  text-decoration: underline;\n  text-decoration-color: #00000000;\n  line-height: normal;\n  padding: 0.425rem;\n  border-radius: 0.5rem;\n  transition: text-decoration-color 250ms;\n  text-decoration-thickness: 0.625rem;\n  text-underline-offset: 1.9rem;\n}\n\n.header__nav-link:hover {\n  text-decoration-color: #000000ff;\n}\n\n.header__nav-link:active {\n  transition: text-underline-offset 100ms ease;\n  text-underline-offset: 0.5rem;\n}\n\n.header__nav--secondary {\n  align-self: flex-end;\n}\n\n.header__nav-button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  padding: 0.75rem 2rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.button--click-animation {\n  transition: transform 100ms;\n}\n\n.button--click-animation:hover {\n  transform: scale(1.05);\n}\n\n.button--click-animation:active {\n  transform: scale(1);\n}\n\n/* Styling main section */\n.donate-section {\n  display: grid;\n  grid-auto-flow: column;\n  grid-template-columns: 1fr 1.2fr;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 15rem;\n  padding-left: 5rem;\n}\n\n.donate-section__text-content {\n  position: relative;\n  z-index: 1;\n}\n\n.donate-section__tag-list {\n  list-style-position: inside;\n  list-style-image: url(../assets/list-style-hyphen.svg);\n}\n\n.donate-section__tag-list-element {\n  font-family: Lato;\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--bg-color-dark-cyan, #13829b);\n  line-height: normal;\n}\n\n.donate-section__title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--font-color-primary, #333);\n  line-height: normal;\n  position: relative;\n  margin-bottom: 2.75rem;\n  max-width: 90%;\n}\n\n.donate-section__title--highlighted {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 4rem;\n  font-style: normal;\n  font-weight: 700;\n  color: var(--bg-color-dark-cyan, #13829b);\n  text-decoration: underline;\n  text-decoration-color: var(--bg-color-very-light-orange, #fde9c9);\n  line-height: normal;\n  text-underline-offset: 1rem;\n  text-decoration-thickness: 0.625rem;\n}\n\n.section__title-icon {\n  width: 3.2rem;\n  height: 3.2rem;\n  background-image: url(../assets/section-icon.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.donate-section__title-block-icon {\n  position: absolute;\n  right: 3rem;\n  bottom: 0;\n}\n\n.donate-section__desctiption {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem; /* 161.111% */\n  margin-bottom: 2.5rem;\n  max-width: 70%;\n}\n\n.donate-section__support-block {\n  display: flex;\n  gap: 4rem;\n  align-items: center;\n}\n\n.donate-section__button {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.25rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-white, #fff);\n  line-height: normal;\n  gap: 1rem;\n  padding: 1.5rem 3.5rem;\n  background-color: var(--bg-color-dark-cyan, #13829b);\n  border: none;\n  border-radius: 0.5rem;\n}\n\n.donate-section__support-block--extra {\n  text-decoration: none;\n  display: flex;\n  gap: 1rem;\n  align-items: center;\n}\n\n.donate-section__support-block-icon {\n  display: block;\n  width: 3rem;\n  height: 3rem;\n  background-image: url(../assets/open-more-in_circrle-arrow.svg);\n}\n\n.donate-section__support-block-title {\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  line-height: 1.8125rem;\n}\n\n.donate-section__image-content {\n  display: grid;\n  position: relative;\n  justify-content: right;\n}\n\n.donate-section__image-content--kids-image {\n  position: absolute;\n  z-index: 3;\n  top: 8rem;\n  right: 65%;\n  border: 5px solid white;\n  border-radius: 15rem;\n  filter: grayscale(100%);\n}\n\n.donate-section__image-content-block--clothes-image {\n  position: relative;\n  z-index: 1;\n}\n\n.donate-section__image-content-square--blue-transparent {\n  position: absolute;\n  bottom: 15%;\n  left: 15%;\n  width: 30%;\n  height: 27%;\n  background-color: var(--bg-color-cyan, #29d2e4);\n  mix-blend-mode: multiply;\n}\n\n.donate-section__image-content-rectangle {\n  position: absolute;\n  z-index: 0;\n  right: 0;\n  bottom: -5rem;\n  width: 100%;\n  height: 19rem;\n  background-color: var(--bg-color-light-orange, #fcc29a);\n}\n\n/* Second section styling */\n.additional-info-section__content {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, 400px);\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 14rem;\n}\n\n.additional-info-section__content-item {\n  display: grid;\n  padding: 1rem;\n  border-right: 0.3rem solid #fcc29a;\n  justify-items: center;\n}\n\n.additional-info-section__content-item:last-child {\n  border: none;\n}\n\n.additional-info-section__content-item-icon {\n  margin-bottom: 1.7rem;\n  width: 3.0625rem;\n  height: 2.875rem;\n}\n\n.additional-info-section__content-item-title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 1.5rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  text-align: center;\n  line-height: normal;\n  margin-bottom: 1.25rem;\n}\n\n.additional-info-section__content-item-link {\n  text-decoration: none;\n  display: flex;\n  gap: 0.5rem;\n}\n\n.additional-info-section__content-item-link:hover {\n  text-decoration: underline;\n  text-decoration-color: var(--font-color-primary, #333);\n  text-underline-offset: 0.3rem;\n  text-decoration-thickness: 0.2rem;\n}\n\n.additional-info-section__content-item-link-title {\n  font-family: var(--font-family-secondary, Raleway);\n  font-size: 1rem;\n  font-style: normal;\n  font-weight: 600;\n  color: var(--font-color-primary, #333);\n  text-transform: uppercase;\n  line-height: normal;\n}\n\n.additional-info-section__content-item-link-icon {\n  width: 1.125rem;\n  height: 1.125rem;\n}\n\n/* Product section (third section)*/\n.product-section__content {\n  padding: 0 5rem;\n  display: grid;\n  grid-gap: 15rem;\n  justify-items: center;\n}\n\n.product-section__content-item {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));\n  justify-items: center;\n  align-items: center;\n  grid-gap: 3rem;\n}\n\n.product-section__content-item-title {\n  display: flex;\n  align-items: center;\n  font-size: 3rem;\n  font-style: normal;\n  font-weight: 600;\n  line-height: normal;\n  gap: 1.9rem;\n  margin-bottom: 1.25rem;\n}\n\n.product-section__content-item-desctiption {\n  max-width: 80%;\n  color: var(--font-color-primary, #333);\n  font-family: var(--font-family-primary, Lato);\n  font-size: 1.125rem;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 1.75rem;\n}\n\n.product-section__content-item-image {\n  box-shadow: -8rem -3rem var(--bg-color-light-orange, #fcc29a);\n}\n\n.product-section__content-item--2 {\n  justify-items: flex-start;\n}\n\n.product-section__content-item--2 > .product-section__content-item-text-content {\n  order: 1;\n}\n\n.product-section__content-item--2 .product-section__content-item-image {\n  box-shadow: 8rem -3rem var(--bg-color-cyan, #29d2e4);\n}\n\n@media screen and (max-width: 1600px) {\n  /* Additional-section media querry*/\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:last-child {\n    grid-column: 2/3;\n    grid-row: 2/3;\n  }\n}\n\n@media screen and (max-width: 1400px) {\n  /* Product section (third section) media query */\n  .product-section__content {\n    grid-gap: 5rem;\n    align-items: center;\n  }\n  .product-section__content-item {\n    max-width: 70vw;\n    justify-items: flex-start;\n  }\n  .product-section__content-item-image-block {\n    justify-self: center;\n  }\n  .product-section__content-item--2 > .product-section__content-item-image-block {\n    justify-self: center;\n  }\n  .product-section__content-item-desctiption {\n    max-width: 100%;\n  }\n  .product-section__content-item .product-section__content-item-text-content {\n    order: 1;\n  }\n}\n\n@media screen and (max-width: 1200px) {\n  /* Donate Section(Main block) media query */\n  .donate-section {\n    grid-auto-flow: row;\n    grid-gap: 1.5rem;\n    grid-template-columns: auto;\n    margin-bottom: 5rem;\n  }\n\n  .donate-section__title-block-icon {\n    right: 0;\n  }\n\n  .donate-section__image-content--kids-image {\n    top: 30%;\n    left: 0;\n  }\n  .donate-section__image-content-rectangle {\n    bottom: 30%;\n    width: 100%;\n    height: 20%;\n  }\n\n  /* Additional-section(Second section) media query */\n  .additional-info-section__content {\n    grid-gap: 1rem;\n    margin-bottom: 7rem;\n  }\n  .additional-info-section__content-item:nth-child(2) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: 0.3rem solid #fcc29a;\n  }\n  .additional-info-section__content-item:last-child {\n    grid-column: auto;\n    grid-row: auto;\n  }\n\n  /* Product section (third section) media query */\n  .product-section__content-item--2 > .product-section__content-item-image-block {\n    justify-self: flex-start;\n  }\n}\n\n@media screen and (max-width: 900px) {\n  /* Primary header media query */\n  .header__content {\n    padding: 1rem;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  /* Donate Section(Main block) media query */\n  .donate-section__title {\n    margin-bottom: 0;\n  }\n  .donate-section__title-block-icon {\n    position: relative;\n    margin-left: 90%;\n  }\n  .donate-section {\n    padding-left: 1rem;\n  }\n  .donate-section__support-block {\n    gap: 1rem;\n  }\n\n  /* Additional-section(Second section) media query */\n  .additional-info-section__content {\n    justify-items: center;\n  }\n  .additional-info-section__content-item {\n    border-right: none;\n    border-bottom: 0.3rem solid #fcc29a;\n    border-radius: 2rem;\n  }\n  .additional-info-section__content-item:nth-child(3) {\n    border-right: none;\n  }\n  .additional-info-section__content-item:last-child {\n    border-bottom: 0.3rem solid #fcc29a;\n    border-radius: 2rem;\n  }\n\n  /* Product section (third section) media query */\n  .product-section__content {\n    padding: 0 1rem;\n  }\n  .product-section__content-item {\n    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1343,6 +1436,8 @@ module.exports = styleTagTransform;
 var map = {
 	"./bg-image-clothes-142w.png": "./src/assets/bg-image-clothes-142w.png",
 	"./bg-image-clothes-608w.png": "./src/assets/bg-image-clothes-608w.png",
+	"./bunch-of-clothes-484w.png": "./src/assets/bunch-of-clothes-484w.png",
+	"./clothes-on-rack-484w.png": "./src/assets/clothes-on-rack-484w.png",
 	"./drone-video.svg": "./src/assets/drone-video.svg",
 	"./incognito.svg": "./src/assets/incognito.svg",
 	"./kids-selfie-100w.png": "./src/assets/kids-selfie-100w.png",
@@ -1396,6 +1491,28 @@ module.exports = __webpack_require__.p + "assets/bg-image-clothes-142w.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "assets/bg-image-clothes-608w.png";
+
+/***/ }),
+
+/***/ "./src/assets/bunch-of-clothes-484w.png":
+/*!**********************************************!*\
+  !*** ./src/assets/bunch-of-clothes-484w.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/bunch-of-clothes-484w.png";
+
+/***/ }),
+
+/***/ "./src/assets/clothes-on-rack-484w.png":
+/*!*********************************************!*\
+  !*** ./src/assets/clothes-on-rack-484w.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/clothes-on-rack-484w.png";
 
 /***/ }),
 
@@ -1662,4 +1779,4 @@ __webpack_require__("./src/assets sync recursive ^\\.\\/.*$");
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle4e7a44abc4fd7419d735.js.map
+//# sourceMappingURL=bundle420f75241c992bc93650.js.map

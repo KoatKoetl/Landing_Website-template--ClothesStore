@@ -9,9 +9,12 @@
     <header class="header header--primary">
       <div class="header__content">
         <div class="header__content-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" class="header__content-logo-image">
-            <circle cx="30" cy="30" r="30" transform="matrix(-1 0 0 1 60 0)" fill="#FCC29A" />
-          </svg>
+          <img
+            srcset="assets/web-logo-60w.svg 60w, assets/web-logo-30w.svg 30w"
+            sizes="(max-width: 768px) 30px, 60px"
+            src="assets/web-logo-60w.svg"
+            alt="website logo"
+          />
         </div>
 
         <nav class="header__nav header__nav--primary">
@@ -28,7 +31,7 @@
         </div>
 
         <label class="header__hamburger-menu">
-          <input type="checkbox" />
+          <input type="checkbox" class="header__hamburger-menu-checkbox" />
         </label>
         <ul class="header__hamburger-menu-sidebar">
           <li class="header__nav-list-element"><a href="#donate-section" class="header__nav-link">Home</a></li>

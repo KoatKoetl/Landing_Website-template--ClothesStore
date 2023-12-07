@@ -156,10 +156,6 @@ p {
   cursor: pointer;
 }
 
-.header__hamburger-menu:has(input:checked) {
-  --background: #333;
-}
-
 .header__hamburger-menu::before,
 .header__hamburger-menu::after,
 .header__hamburger-menu input {
@@ -209,6 +205,7 @@ p {
   width: 100dvw;
   min-height: 100dvh;
   text-align: center;
+  visibility: hidden;
 }
 
 .header__hamburger-menu-sidebar > .header__nav-list-element > .header__nav-link {
@@ -629,6 +626,7 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    visibility: visible;
   }
 
   /* Donate Section(Main block) media query */

@@ -1,8 +1,5 @@
 import './CSS/style.css';
 // Load all assets
 require.context('../src/assets', true);
-import { actionHamburgerMenu, openHamburgerMenuLink, hideHamburgerMenuOnResize } from './burger-menu';
-
-actionHamburgerMenu();
-openHamburgerMenuLink();
-hideHamburgerMenuOnResize();
+import { onScreenActivate } from './burger-menu';
+onScreenActivate();

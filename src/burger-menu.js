@@ -3,6 +3,7 @@ const hamburgerMenuCheckbox = document.querySelector('.header__hamburger-menu-ch
 const hamburgerMenuLinks = Array.from(document.querySelectorAll('.header__hamburger-menu-sidebar .header__nav-link'));
 const hamburgerMenuSidebar = document.querySelector('.header__hamburger-menu-sidebar');
 
+// open hamburger menu when clicked
 function actionHamburgerMenu() {
   hamburgerMenuButton.addEventListener('click', () => {
     if (hamburgerMenuCheckbox.checked === false) {
@@ -17,6 +18,7 @@ function actionHamburgerMenu() {
   });
 }
 
+// Close menu when clicked on link
 function openHamburgerMenuLink() {
   hamburgerMenuLinks.forEach((link) => {
     link.addEventListener('click', () => {
@@ -27,6 +29,7 @@ function openHamburgerMenuLink() {
   });
 }
 
+// Hide menu if screen width is resized
 function hideHamburgerMenuOnResize() {
   window.addEventListener('resize', () => {
     const windowWidth = window.innerWidth;
@@ -39,4 +42,10 @@ function hideHamburgerMenuOnResize() {
   });
 }
 
-export { actionHamburgerMenu, openHamburgerMenuLink, hideHamburgerMenuOnResize };
+function onScreenActivate() {
+  actionHamburgerMenu();
+  openHamburgerMenuLink();
+  hideHamburgerMenuOnResize();
+}
+
+export { onScreenActivate };

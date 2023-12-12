@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clothes Store</title>
+    <link rel="icon" href="./assets/section-icon.svg" />
   </head>
   <body>
     <header class="header header--primary">
@@ -22,7 +23,7 @@
             <li class="header__nav-list-element"><a href="#donate-section" class="header__nav-link">Home</a></li>
             <li class="header__nav-list-element"><a href="#product-section" class="header__nav-link">About</a></li>
             <li class="header__nav-list-element"><a href="#blog-section" class="header__nav-link">Blog</a></li>
-            <li class="header__nav-list-element"><a href="#" class="header__nav-link">Contact Us</a></li>
+            <li class="header__nav-list-element"><a href="#get-in-touch-section" class="header__nav-link">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -36,8 +37,8 @@
         <ul class="header__hamburger-menu-sidebar">
           <li class="header__nav-list-element"><a href="#donate-section" class="header__nav-link">Home</a></li>
           <li class="header__nav-list-element"><a href="#product-section" class="header__nav-link">About</a></li>
-          <li class="header__nav-list-element"><a href="#" class="header__nav-link">Blog</a></li>
-          <li class="header__nav-list-element"><a href="#" class="header__nav-link">Contact Us</a></li>
+          <li class="header__nav-list-element"><a href="#blog-section" class="header__nav-link">Blog</a></li>
+          <li class="header__nav-list-element"><a href="#get-in-touch-section" class="header__nav-link">Contact Us</a></li>
           <li class="header__nav-list-element"><a href="#" class="header__nav-link">Log in</a></li>
         </ul>
       </div>
@@ -322,14 +323,14 @@
       </div>
     </section>
 
-    <section class="section get-in-touch-section">
-      <div class="get-in-touch-section__content">
-        <div class="get-in-touch-section__help-us-block">
-          <div class="get-in-touch-section__text-block">
-            <h2 class="get-in-touch-section__title section__item-title">Want to help? Here`s how</h2>
-            <p class="get-in-touch-section__text section__text-content">
+    <section class="section help-us-section" aria-label="help-us-section">
+      <div class="help-us-section__content">
+        <div class="help-us-section__help-us-block">
+          <div class="help-us-section__text-block">
+            <h2 class="help-us-section__title section__item-title">Want to help? Here`s how</h2>
+            <p class="help-us-section__text section__text-content">
               All of this text is editable. Simply click anywhere in the paragraph or heading text and start typing. You can copy and
-              <span class="get-in-touch-section__text--visibility-hidden">
+              <span class="help-us-section__text--visibility-hidden">
                 paste your own content in to see what it looks like with these font combinations. All of this text is editable. Simply click
                 anywhere in the paragraph or heading text and start typing. You can copy and paste your own content in to see what it looks
                 like with these font combinations. All of this text is editable. Simply click anywhere in the paragraph or heading text and
@@ -337,22 +338,50 @@
               </span>
             </p>
 
-            <button class="button get-in-touch-section__button button--click-animation">Learn more</button>
+            <button class="button help-us-section__button button--click-animation">Learn more</button>
           </div>
-          <div class="get-in-touch-section__image-block">
+          <div class="help-us-section__image-block">
             <img
-              srcset="assets/get-in-touch-557w.png 557w"
+              srcset="assets/help-us-557w.png 557w"
               sizes="(min-width: 1200px) 557px, 50vw"
-              src="assets/get-in-touch-557w.png"
+              src="assets/help-us-557w.png"
               alt="bunch of clothes on rack"
-              class="get-in-touch-section__image"
+              class="help-us-section__image"
               loading="lazy"
             />
           </div>
         </div>
-
-        <div class="get-in-touch-section__get-in-touch-block"></div>
       </div>
     </section>
+
+    <footer class="get-in-touch-section section" id="get-in-touch-section">
+      <div class="get-in-touch-section__content">
+        <div class="get-in-touch-section__image-block">
+          <div class="get-in-touch-section__rectangle"></div>
+          <img
+            src="assets/get-in-touch-image-650w.png"
+            alt="landline telephone"
+            class="get-in-touch-section__image"
+            srcset="assets/get-in-touch-image-650w.png 650w"
+            sizes="(min-width: 768px) 650px, 85vw"
+            loading="lazy"
+          />
+        </div>
+        <div class="get-in-touch-section__text-block">
+          <h2 class="get-in-touch-section__title section__item-title">Get in Touch</h2>
+          <p class="get-in-touch-section__text-content section__text-content">
+            All of this text is editable. Simply click anywhere in the paragraph or heading text and start typing. You can copy and paste
+            your own content in to see what it looks like with these font combinations. All of this text is editable.
+          </p>
+          <button class="button get-in-touch-section__button button--click-animation">Contact</button>
+          <div class="get-in-touch-section__icons-block">
+            <div class="get-in-touch-section__icon get-in-touch-section__icon--twitter"></div>
+            <div class="get-in-touch-section__icon get-in-touch-section__icon--facebook"></div>
+            <div class="get-in-touch-section__icon get-in-touch-section__icon--linkedIn"></div>
+          </div>
+          <div class="get-in-touch-section__text-block-square"></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -14,7 +14,7 @@ The layout itself is Figma free resource: <br>
 </p>
 <p>
 That is my second project that i tried to do my best to hit the layout. <br>
-After the previous work(Simple-website-template__Landing_Layout--Practice), i think i did my job much better. The commits, BEM method, semantic tags, overall structure of HTML and some sort of stucrture in CSS is definitely better.
+After the previous work(Simple-website-template__Landing_Layout--Practice), i think i did my job much better. The commits, BEM method, semantic tags, overall structure of HTML and some sort of stucrture in CSS are definitely better.
 </p>
 <h2>What is used</h2>
 <ul>
